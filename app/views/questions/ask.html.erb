@@ -1,0 +1,25 @@
+<!-- app/views/layouts/application.html.erb -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lazy Coaching</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <h1>The Lazy Coach</h1> <!-- Add this -->
+
+    <form action="/answer" method="get">
+      <input type="text" name="question" placeholder="Your question">
+      <input type="submit">
+    </form>
+
+    <%= yield %>
+
+    <p>A very simple footer</p>  <!-- Add this -->
+  </body>
+</html>
