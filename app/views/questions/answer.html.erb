@@ -11,13 +11,18 @@
   </head>
 
   <body>
-    <h1>The Lazy Coach</h1> <!-- Add this -->
-
-    <%= yield %>
-
-    <%= @answer %>
-    <br>
-    <%= link_to "Ask a new question", ask_path %>
+    <div class="container">
+      <h1>The Lazy Coach</h1> <!-- Add this -->
+      <%= yield %>
+      <div class="box">
+        <strong><%= @question %></strong>
+        <br>
+        <br>
+        <em><%= @answer %></em>
+      </div>
+      <br>
+      <%= link_to "Ask a new question", ask_path %>
+    </div>
     <p>A very simple footer</p>  <!-- Add this -->
   </body>
 </html>
